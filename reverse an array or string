@@ -1,0 +1,33 @@
+
+#Using Iteration
+def reversedlist(A,start,end):
+    while start < end:
+        A[start],A[end]=A[end],A[start]
+        start=start+1
+        end=end-1
+A=[1,32,3,4,22,11,12]
+print("The list is",A)
+reversedlist(A,0,6)
+print("The reversed list is",A)
+
+#using Recursion:
+
+def reversedlist(A,start,end):
+    if start >= end:
+        return
+    A[start],A[end]=A[end],A[start]
+    reversedlist(A,start+1,end-1)
+
+A=[10,9,8,7,6,5,4,3,2]
+print("The list is",A)
+reversedlist(A,0,8)
+print("The reversed list is",A)
+
+#Using list slicing 
+def reversedlist(A):
+    print(A[::-1])
+    
+A=[1,2,3,4,5,9]
+print("The list is",A)
+print ("The reversed list is",)
+reversedlist(A)
